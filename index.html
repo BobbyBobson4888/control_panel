@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="control_panel.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body class="control-panel">
+    <div title="Welcome" class="module">
+      <div>
+        This is a module!<br>
+        Actually, this is the content div of a module<br>
+        A module has two divs: a content div and a control div.<br>
+        There's nothing to tag, just make two divs.<br>
+        They're just the first and second div in a .module<br>
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(1)">Next</button>
+      </div>
+    </div>
+    <div title="even-controls" class="module even-controls" hidden>
+      <div>
+        By default, the content div<br>
+        is 3 times wider than<br>
+        the control div.<br>
+        A .module.even-controls<br>
+        divides the space evenly<br>
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(2)">Next</button>
+      </div>
+    </div>
+    <div class="module" hidden>
+      <div>
+        The title bar displays the title attribute<br>
+        of the .module. If the .module does not<br>
+        have a title attribute, the title bar<br>
+        does not appear<br>
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(3)">Next</button>
+      </div>
+    </div>
+    <div title="Colors" class="module" hidden>
+      <div>
+        The colors of the panels are assigned to<br>
+        CSS variables. Go ahead and change<br>
+        them around, this style tag is editable!<br>
+        <pre><style id="color_style" contenteditable="">.module[title=Colors] {
+  --module-bg: silver;
+  --module-border-size: 1px;
+  --module-border: solid black;
+}</style></pre>
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(4)">Next</button>
+        <button onclick="reset_color_style()">Reset CSS</button>
+      </div>
+    </div>
+    <div title="Button(s)" class="module" hidden>
+      <div>
+        Hold on! That module had two buttons! The<br>
+        control div of each module has actually been<br>
+        a div.buttons_v, aka a vertical button group.<br>
+        You can add as many buttons as you want!<br>
+        (click <button onclick="reset_buttons('add_button_v', 5)">here</button> to reset)
+      </div>
+      <div id="add_button_v" class="buttons_v">
+        <button onclick="unhide(5)">Next</button>
+        <button onclick="add_button('add_button_v', 5)">Add Button</button>
+      </div>
+    </div>
+    <!-- s n o t t u B -->
+    <div title="B u t t o n s" class="module auto-controls" hidden id="horizontal-buttons">
+      <div>
+        You can also use .buttons_h to make a<br>
+        horizontal button group. Changing your<br>
+        .module to a .module.auto-controls lets<br>
+        the content and control divs change their<br>
+        width independantly. (<button onclick="reset_buttons('add_button_h', 6)">reset</button>)
+      </div>
+      <div id="add_button_h" class="buttons_h">
+        <button onclick="unhide(6)">Next</button>
+        <button onclick="add_button('add_button_h', 6)">Add Button</button>
+      </div>
+    </div>
+    <div title="Bu tt on s" class="module even-controls" hidden>
+      <div>
+        Vertical and horizontal button<br>
+        groups are great, and have the<br>
+        advantage of adapting to any<br>
+        amount of buttons automatically.<br>
+        A .four_buttons must have four<br>
+        buttons, but it organizes them<br>
+        in a 2x2 pattern.<br>
+      </div>
+      <div class="four_buttons">
+        <button onclick="unhide(7)">Next</button>
+        <button onclick="hide(6)">Previous</button>
+        <button onclick="red(true)">Red</button>
+        <button onclick="red(false)">Not Red</button>
+      </div>
+    </div>
+    <div title="Linebox" class="module" hidden>
+      <div class="linebox">
+        <pizza>A .linebox places each child</pizza>
+        <pizza>element on its own line. The</pizza>
+        <pizza>child elements can be anything</pizza>
+        <pizza>you'd like, they'll probably work.</pizza>
+        <pizza>These are pizza! Special, clickable,</pizza>
+        <pizza>color changing pizza! The first and</pizza>
+        <pizza>last elements will match the </pizza>
+        <pizza>border-radius of the .linebox.</pizza>
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(8)">Next</button>
+      </div>
+    </div>
+    <div title="Gridform" class="module" hidden>
+      <div class="gridform">
+        <p>Gridform</p>
+        <input type="text" value="was meant for forms">
+        <p>but it's</p>
+        <input type="text" value="just a grid">
+        <p>labels are</p>
+        <input type="text" value="&lt;p&gt; elements">
+        <p>the items</p>
+        <i>don't have to be &lt;input&gt;'s</i>
+        <h3>&lt;h3&gt; elements</h3>
+        <p>are for</p>
+        <input type="text" value="section headers">
+      </div>
+      <div class="buttons_v">
+        <button onclick="unhide(9)">Next</button>
+      </div>
+    </div>
+    <div title="Final Thoughts" class="module auto-controls" hidden>
+      <div>
+        I wrote this css because i wanted<br>
+        to build localhost web interfaces<br>
+        rather than learning tkinter, but<br>
+        they always turned out ugly. I<br>
+        hope it can help you.<br>
+      </div>
+      <div class="buttons_v">
+        <button onclick="hide_all()">Start Over</button>
+        <button onclick="window.location = 'https://github.com/BobbyBobson4888/control_panel'">View on Github</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    // for (i = 0; i < document.body.children.length-1; i++) {
+    //   unhide(i)
+    // }
+  </script>
+</html>
