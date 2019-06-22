@@ -146,10 +146,23 @@
         <button onclick="window.location = 'https://github.com/BobbyBobson4888/control_panel'">View on Github</button>
       </div>
     </div>
+    <div title="Controls" class="module auto-controls" hidden>
+      <div>
+        If you want the page to start fully<br>
+        populated, the button to the right<br>
+        is for you.<br>
+      </div>
+      <div class="button_v">
+        <button onclick="set_populate(true)">Start Full</button>
+        <button onclick="set_populate(true)">Start Empty</button>
+      </div>
+    </div>
   </body>
   <script>
-    // for (i = 0; i < document.body.children.length-1; i++) {
-    //   unhide(i)
-    // }
+    if (window.localStorage.show_all) {
+      for (i = 0; i < document.body.children.length-1; i++) {
+        unhide(i)
+      }
+    }
   </script>
 </html>
