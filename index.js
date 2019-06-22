@@ -32,6 +32,6 @@ function set_populate(bap) {
   if (bap == true) {
     window.localStorage.show_all = true
   } else {
-    window.localStorage.show_all = false
+    delete window.localStorage.show_all
   }
 }
