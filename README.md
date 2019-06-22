@@ -4,8 +4,4 @@ i keep making things that require a control panel of some sort. a normal person 
 
 this css file doesn't have anything to do with that, it just makes the frontend part of that whole equation a lot quicker.
 
-TODO:
-- make some examples
-- make some documentation
-- explain how to use it
-- refer to items 1-3
+Documentation: [https://bobbybobson4888.github.io/control_panel/](https://bobbybobson4888.github.io/control_panel/)
