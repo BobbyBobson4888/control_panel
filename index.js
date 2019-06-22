@@ -28,3 +28,10 @@ function red(red) {
     document.body.style.backgroundColor = ""
   }
 }
+function set_populate(bap) {
+  if (bap == true) {
+    window.localStorage.show_all = true
+  } else {
+    delete window.localStorage.show_all
+  }
+}
