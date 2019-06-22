@@ -1,0 +1,159 @@
+/* Control Panel */
+.control-panel {
+  display: flex;
+  font-family: sans-serif;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.control-panel > .module {
+  background-color: var(--module-bg, silver);
+  border: 1px var(--module-border, solid black);
+  border-radius: 10px;
+  padding: 5px;
+  grid-template-columns: 3fr 1fr;
+  display: grid;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+.control-panel > .module[title] {
+  border-radius: 0 10px 10px 10px;
+}
+.control-panel > .module.half-controls {
+  grid-template-columns: 1fr 1fr;
+}
+.control-panel > .module > div:not(:last-child) {
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.control-panel > .module[title]::before {
+  background-color: var(--module-bg, silver);
+  border: 1px var(--module-border, solid black);
+  border-bottom: 0px;
+  content: attr(title);
+  font-size: 20px;
+  margin-top: -30px;
+  margin-left: -6px;
+  padding: 0 15px;
+  padding-bottom: 1px;
+  display: block;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Button Groups */
+.four_buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  border-radius: 12px;
+  column-gap: 1px;
+  row-gap: 1px;
+  border: 1px solid var(--border-color, black);
+  background-color: var(--border-color, black);
+}
+.four_buttons > button {
+  font-size: 15px;
+  margin: 0px;
+  padding: 0 20px;
+  background-color: var(--button-color, white);
+  border: 0px;
+}
+.four_buttons > button:first-child {
+  border-top-left-radius: 10px;
+}
+.four_buttons > button:first-child + button {
+  border-top-right-radius: 10px;
+}
+.four_buttons > button:first-child + button + button {
+  border-bottom-left-radius: 10px;
+}
+.four_buttons > button:first-child + button + button + button {
+  border-bottom-right-radius: 10px;
+}
+.buttons_v {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, black);
+}
+.buttons_v > button {
+  margin: 0px;
+  padding: 0 20px;
+  background-color: var(--button-color, white);
+  border: 0px;
+  flex-grow: 1;
+}
+.buttons_v > button:not(:last-child) {
+  border-bottom: var(--spacing, 1px) solid var(--border-color, black);
+}
+.buttons_v > button:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.buttons_v > button:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.buttons_h {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, black);
+}
+.buttons_h > button {
+  margin: 0px;
+  padding: 0 20px;
+  background-color: var(--button-color, white);
+  border: 0px;
+}
+.buttons_h > button:not(:last-child) {
+  border-right: var(--spacing, 1px) solid var(--border-color, black);
+}
+.buttons_h > button:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.buttons_h > button:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Rounded div where each child is on its own line and are rounded to match the parent */
+.linebox {
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.linebox > * {
+  display: block;
+  padding: 0 5px;
+}
+.linebox > *:empty::before {
+  content: "\00a0";
+}
+.linebox > *:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.linebox > *:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+/* Form aligned to a grid. p elements are labels. h3 are section headers. */
+.gridform {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.gridform > *:not(p) {
+  width: 100%;
+}
+.gridform > p {
+  margin: 0 10px 5px 0;
+}
+.gridform > p:last-child {
+  margin-bottom: 0;
+}
+.gridform > h3 {
+  grid-column: 1 / span 2;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
