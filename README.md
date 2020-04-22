@@ -1,4 +1,5 @@
 # control_panel
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 i keep making things that require a control panel of some sort. a normal person would just put in the effort to figure out tkinter. a cyber-genius would make a web server embedded in the software that exposes itself to localhost.
 
